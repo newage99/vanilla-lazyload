@@ -715,7 +715,7 @@
   var queryElements = function queryElements(settings) {
     console.log("queryElements settings below");
     console.log(settings);
-    settings.container.querySelectorAll(settings.elements_selector);
+    return settings.container.querySelectorAll(settings.elements_selector);
   };
   var excludeManagedElements = function excludeManagedElements(elements) {
     return toArray(elements).filter(hasEmptyStatus);
