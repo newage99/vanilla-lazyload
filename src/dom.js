@@ -2,8 +2,11 @@ import { hasEmptyStatus, hasStatusError } from "./data";
 
 export const toArray = (nodeSet) => Array.prototype.slice.call(nodeSet);
 
-export const queryElements = (settings) =>
-    settings.container.querySelectorAll(settings.elements_selector);
+export const queryElements = (settings) => {
+  console.log("queryElements settings below")
+  console.log(settings)
+  settings.container.querySelectorAll(settings.elements_selector);
+}
 
 export const excludeManagedElements = (elements) => toArray(elements).filter(hasEmptyStatus);
 
