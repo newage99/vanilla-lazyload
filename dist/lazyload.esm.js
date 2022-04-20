@@ -666,8 +666,11 @@ const setObserver = (settings, instance) => {
 
 const toArray = (nodeSet) => Array.prototype.slice.call(nodeSet);
 
-const queryElements = (settings) =>
-    settings.container.querySelectorAll(settings.elements_selector);
+const queryElements = (settings) => {
+  console.log("queryElements settings below");
+  console.log(settings);
+  settings.container.querySelectorAll(settings.elements_selector);
+};
 
 const excludeManagedElements = (elements) => toArray(elements).filter(hasEmptyStatus);
 
